@@ -16,6 +16,12 @@ function getById(id){
     .first();
 }
 
+function del(id){
+    return db('classes')
+    .where('id', id)
+    .delete();
+}
+
 function insert(cla){
     return db('classes')
         .insert(cla)
@@ -25,5 +31,6 @@ function insert(cla){
 module.exports = {
     get,
     getByClassName,
-    insert
+    insert,
+    del
 };

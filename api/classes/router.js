@@ -8,8 +8,15 @@ const {
     get,
     getByUsername,
     insert,
+    del,
 } = require('./model');
 
+router.delete('/', (req, res) =>{
+    if(!req.body.id){
+        res.status(401).send({message: 'id required'})
+    }
+    del(req.body.id).then(a => res.send({message: 'class deleted'})).catch( e => res.send({error: e}));
+})
 router.get('/', (req, res) =>{
     get().then(a => res.send(a)).catch(e => res.send(e));
 })
