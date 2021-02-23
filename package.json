@@ -1,0 +1,30 @@
+{
+  "name": "BE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anywhere-Fitness-188/BE.git"
+  },
+  "keywords": [],
+  "author": "Jacob Morris <Jacobthomasmorris@gmail.com> (https://jacobmorris.netlify.app/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anywhere-Fitness-188/BE/issues"
+  },
+  "homepage": "https://github.com/Anywhere-Fitness-188/BE#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^4.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.18",
+    "sqlite3": "^5.0.2"
+  }
+}
