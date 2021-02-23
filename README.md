@@ -46,3 +46,11 @@ Available Routes
            }
      returns: {message: 'class added'}
      Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
+4. Delete a class
+    route: https://fittness.herokuapp.com/api/classes
+    method: delete
+    takes {
+            "id": [integer] (required)
+           }
+     returns: {message: 'class deleted'}
+     Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
