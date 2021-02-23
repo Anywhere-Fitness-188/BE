@@ -12,8 +12,8 @@ function getByUsername(username){
 
 function getById(id){
     return db('users')
-        .where(id, id)
-        .first();
+    .where('id', id)
+    .first();
 }
 
 function insert(user){
