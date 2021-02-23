@@ -38,7 +38,7 @@ function insert(cla){
             }
             return db('join')
                 .insert(joinObj)
-                .then(a =>{ return 'class added'})
+                .then(a =>{ return a})
         });
 }
 
