@@ -7,6 +7,8 @@ const session = require('express-session');
 
 const authRouter = require('./auth/router');
 
+const classRouter = require('./classes/router')
+
 const server = express();
 
 server.use(helmet());
@@ -28,6 +30,7 @@ server.use(
 
 
 server.use('/api/auth', authRouter);
+server.use('/api/classes', restrict, classRouter);
 
 server.get("/", (req, res) => {
     res.json({message: 'up'});
