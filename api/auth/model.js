@@ -19,7 +19,7 @@ function getById(id){
 function insert(user){
     return db('users')
         .insert(user)
-        .then(a => {return a});
+        .then(a => {return a[0]});
 }
 
 module.exports = {

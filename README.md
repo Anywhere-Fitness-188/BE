@@ -37,6 +37,7 @@ Available Routes
     route: https://fittness.herokuapp.com/api/classes
     method: post
     takes {
+            "user_id": [integer] (required, this is the id for the instructor)
             "name": [string] (required),
             "start_time": [string] (required),
             "duration": [string],
