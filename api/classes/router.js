@@ -19,7 +19,7 @@ router.post('/', (req, res) =>{
         res.status(401).send({message: "name and start_time are required"})
     } 
     else{
-        insert(req.body).then(a => res.send({mesage: 'class added'})).catch(e => res.send(e))
+        insert(req.body).then(a => res.send({message: 'class added'})).catch(e => res.send(e))
     }
 })
 module.exports = router;

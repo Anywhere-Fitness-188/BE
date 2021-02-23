@@ -13,10 +13,36 @@ Available Routes
     route: https://fittness.herokuapp.com/api/auth/register
     method: post
     takes: {
-            "username": [string] 
-            "password": [string],
+            "username": [string], 
+            "password": [string]
             }
     returns: {
               message: `Welcome [username]!`,
               token: token
               }
+3. View all Classes
+    route: https://fittness.herokuapp.com/api/classes
+    method: get
+    takes {
+            "name": [string] (required),
+            "start_time": [string] (required),
+            "duration": [string],
+            "intensity_level": [string],
+            "location": [string],
+            "attendees": [integer],"max_attendees": [integer]
+           }
+     returns: an array with all classes.
+     Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
+4. Add New Class
+    route: https://fittness.herokuapp.com/api/classes
+    method: post
+    takes {
+            "name": [string] (required),
+            "start_time": [string] (required),
+            "duration": [string],
+            "intensity_level": [string],
+            "location": [string],
+            "attendees": [integer],"max_attendees": [integer]
+           }
+     returns: {message: 'class added'}
+     Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
