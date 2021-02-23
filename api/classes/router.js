@@ -43,7 +43,7 @@ router.get('/join', (req,res) =>{
 })
 
 router.post('/', (req, res) =>{
-    if(!req.body.name||!req.body.start_time){
+    if(!req.body.name||!req.body.start_time||!req.body.user_id){
         res.status(401).send({message: "user_id, name, and start_time are required"})
     } 
     else{
