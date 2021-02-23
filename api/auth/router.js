@@ -21,7 +21,7 @@ router.post('/register', (req, res) => {
       else{
         const hash = bcrypt.hashSync(req.body.password, 2);
         req.body.password = hash;
-        insert(req.body).then(a => res.send(a)).catch(e => res.status(409).send({message: 'username taken'}));
+        insert(req.body).then(a => res.send(a)).catch(e => res.status(409).send({message: e}));
       }
   }
 });
