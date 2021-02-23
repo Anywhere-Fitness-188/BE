@@ -20,9 +20,11 @@ router.post('/register', (req, res) => {
       }
       else{
         const hash = bcrypt.hashSync(req.body.password, 2);
-        const user = req.body;
+        const user = {username: req.body.username,
+        password: req.body.password,
+        type: req.body.type};
         user.password = hash;
-        insert(user).then(a => res.send({message: 'user registered'})).catch(e => res.status(409).send({error: e}));
+        insert(user).then(a => res.send({message: 'user registered'})).catch(e => res.status(409).send({error: e.message}));
       }
   }
 });
