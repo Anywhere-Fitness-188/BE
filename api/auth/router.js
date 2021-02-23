@@ -16,7 +16,7 @@ router.post('/register', (req, res) => {
   }
   else{
       if(req.body.type != 'client' && req.body.type != 'instructor'){
-        res.status(401).send({message: 'type mus be client or instructor'})
+        res.status(401).send({message: 'type must be client or instructor'})
       }
       else{
         const hash = bcrypt.hashSync(req.body.password, 2);
