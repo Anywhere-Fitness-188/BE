@@ -29,4 +29,8 @@ server.use(
 
 server.use('/api/auth', authRouter);
 
+server.get("/", (req, res) => {
+    res.json({message: 'up'});
+});
+
 module.exports = server;
