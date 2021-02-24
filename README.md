@@ -127,4 +127,24 @@ Available Routes:
      -returns: {message: 'user removed from class'}
 
      -Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
+
+     7. Update Class Info
+
+    -route: https://fittness.herokuapp.com/api/classes
+
+    -method: put
+
+    -takes {
+            "id": [integer] (required, this is the id for the class)
+            "name": [string] (required),
+            "start_time": [string] (required),
+            "duration": [string],
+            "intensity_level": [string],
+            "location": [string],
+            "attendees": [integer],"max_attendees": [integer]
+           }
+
+     -returns: {message: 'class updated'}
+
+     -Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
     
