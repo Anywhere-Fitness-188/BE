@@ -34,7 +34,7 @@ function insert(cla){
         .then(a => {
             const joinObj = {
                 user_id: user_id,
-                class_id: 1
+                class_id: 2
             }
             return db('join')
                 .insert(joinObj)
