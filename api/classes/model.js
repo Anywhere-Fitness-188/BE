@@ -38,7 +38,7 @@ function insert(cla){
             }
             return db('join')
                 .insert(joinObj)
-                .then(a =>{ return a})
+                .then(a =>{ return 'class created'})
         });
 }
 
@@ -59,6 +59,16 @@ function getAttendees(class_id){
     .where('join.class_id', class_id)
 }
 
+function leaveClass(obj){
+    return db('join')
+    .where('user_id', obj.user_id)
+    .where('class_id', obj.class_id)
+    .delete()
+    .then(a =>{
+        return 'user removed from class';
+    })
+}
+
 module.exports = {
     get,
     getByClassName,
@@ -66,5 +76,6 @@ module.exports = {
     del,
     getJoin,
     getAttendees,
-    joinClass
+    joinClass,
+    leaveClass,
 };

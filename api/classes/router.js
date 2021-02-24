@@ -12,6 +12,7 @@ const {
     getJoin,
     getAttendees,
     joinClass,
+    leaveClass,
 } = require('./model');
 
 router.delete('/', (req, res) =>{
@@ -19,6 +20,16 @@ router.delete('/', (req, res) =>{
         res.status(401).send({message: 'id required'})
     }
     del(req.body.id).then(a => res.send({message: 'class deleted'})).catch( e => res.send({error: e}));
+})
+router.get('/', (req, res) =>{
+    get().then(a => res.send(a)).catch(e => res.send(e));
+})
+
+router.delete('/attendees', (req, res) =>{
+    if(!req.body.user_id || !req.body.class_id ){
+        res.status(401).send({message: 'user_id and class_id required'})
+    }
+    leaveClass(req.body).then(a => res.send({message: a})).catch( e => res.send({error: e}));
 })
 router.get('/', (req, res) =>{
     get().then(a => res.send(a)).catch(e => res.send(e));
