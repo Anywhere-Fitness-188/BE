@@ -5,8 +5,10 @@ Available Routes:
 
 
 1. Register
-    []route: https://fittness.herokuapp.com/api/auth/register
-    []method: post
+    -route: https://fittness.herokuapp.com/api/auth/register
+
+    -method: post
+    
     []takes: {
             "username": [string] (unique),
             "password": [string],
