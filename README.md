@@ -5,27 +5,34 @@ Available Routes:
 
 
 1. Register
+
     -route: https://fittness.herokuapp.com/api/auth/register
 
     -method: post
-    
-    []takes: {
+
+    -takes: {
             "username": [string] (unique),
             "password": [string],
             "type": [string] ('client' or 'instructor')
             }
-    []returns: {message: 'username, password and type     required'}
+
+    -returns: {message: 'username, password and type     required'}
+
 2. Login
-    []route: https://fittness.herokuapp.com/api/auth/register
-    []method: post
-    []takes: {
+
+    -route: https://fittness.herokuapp.com/api/auth/register
+
+    -method: post
+
+    -takes: {
             "username": [string], 
             "password": [string]
             }
-    []returns: {
+    -returns: {
               message: `Welcome [username]!`,
               token: token
               }
+              
 3. View all Classes
     []route: https://fittness.herokuapp.com/api/classes
     []method: get
