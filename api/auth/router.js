@@ -24,7 +24,7 @@ router.post('/register', (req, res) => {
         password: req.body.password,
         type: req.body.type};
         user.password = hash;
-        insert(user).then(a => res.send({message: 'user registered'})).catch(e => res.status(409).send({error: e.message}));
+        insert(user).then(a => res.send({message: a})).catch(e => res.status(409).send({error: e.message}));
       }
   }
 });

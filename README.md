@@ -13,7 +13,7 @@ Available Routes:
             "type": [string] ('client' or 'instructor')
             }
 
-    -returns: {message: 'username, password and type     required'}
+    -returns: {message: 'user registered'}
 
 2. Login
 
@@ -110,6 +110,21 @@ Available Routes:
            }
 
      -returns: an array of all attendees (username and user type)
-     
+
+     -Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
+
+7. Remove a User from a Class
+
+    -route: https://fittness.herokuapp.com/api/classes/attendees
+
+    -method: delete
+
+    -takes {
+            "class_id": [integer] (required)
+            "user_id": [integer] (required)
+           }
+
+     -returns: {message: 'user removed from class'}
+
      -Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
     
