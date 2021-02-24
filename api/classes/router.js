@@ -13,6 +13,7 @@ const {
     getAttendees,
     joinClass,
     leaveClass,
+    updateClass,
 } = require('./model');
 
 router.delete('/', (req, res) =>{
@@ -59,6 +60,15 @@ router.post('/', (req, res) =>{
     } 
     else{
         insert(req.body).then(a => res.send({message: a})).catch(e => res.send({error: e}))
+    }
+})
+
+router.put('/', (req, res) =>{
+    if(!req.body.name||!req.body.start_time||!req.body.id){
+        res.status(401).send({message: "id, name, and start_time are required"})
+    } 
+    else{
+        updateClass(req.body).then(a => res.send({message: a})).catch(e => res.send({error: e}))
     }
 })
 module.exports = router;

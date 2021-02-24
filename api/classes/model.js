@@ -69,6 +69,15 @@ function leaveClass(obj){
     })
 }
 
+function updateClass(obj){
+    return db('classes')
+    .where('id', obj.id)
+    .update(obj)
+    .then(a =>{
+        return 'class updated'
+    })
+}
+
 module.exports = {
     get,
     getByClassName,
@@ -78,4 +87,5 @@ module.exports = {
     getAttendees,
     joinClass,
     leaveClass,
+    updateClass,
 };
