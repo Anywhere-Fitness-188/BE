@@ -129,7 +129,7 @@ Available Routes:
 
      -Notes: Make sure to use an 'axios with auth function'. The token must be in the header under "authorization" for the call to be successful. No need to use the word "bearer".
 
-8.Update Class Info
+8. Update Class Info
 
     -route: https://fittness.herokuapp.com/api/classes
 
