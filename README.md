@@ -1,4 +1,4 @@
-Available Routes:
+Available Endpoints:
 
 
 1. Register
