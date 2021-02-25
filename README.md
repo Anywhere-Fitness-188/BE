@@ -135,7 +135,7 @@ Available Routes:
 
     -method: put
 
-    -takes {
+    -takes: {
             "id": [integer] (required, this is the id for the class),
             "name": [string] (required),
             "start_time": [string] (required),
