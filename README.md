@@ -17,7 +17,7 @@ Available Routes:
 
 2. Login
 
-    -route: https://fittness.herokuapp.com/api/auth/register
+    -route: https://fittness.herokuapp.com/api/auth/login
 
     -method: post
 
