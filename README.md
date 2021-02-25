@@ -28,7 +28,8 @@ Available Routes:
 
     -returns: {
               message: `Welcome [username]!`,
-              token: token
+              token: token,
+              user_id: user_id
               }
 
 3. View all Classes
