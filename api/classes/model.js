@@ -36,8 +36,9 @@ function insert(cla){
                 user_id: user_id,
                 class_id: a[0]
             }
+         
             return db('join')
-                .insert(joinObj)
+               .insert(joinObj)
                 .then(a =>{ return 'class created'})
         });
 }
