@@ -37,9 +37,10 @@ function insert(cla){
                 class_id: a[0]
             }
          
-            return db('join')
-               .insert(joinObj)
-                .then(a =>{ return 'class created'})
+            return "class created"
+            // return db('join')
+            //    .insert(joinObj)
+            //     .then(a =>{ return 'class created'})
         });
 }
 
