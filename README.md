@@ -57,15 +57,7 @@ Available Endpoints:
 
     -method: post
 
-    -takes {
-            "user_id": [integer] (required, this is the id for the instructor)
-            "name": [string] (required),
-            "start_time": [string] (required),
-            "duration": [string],
-            "intensity_level": [string],
-            "location": [string],
-            "attendees": [integer],"max_attendees": [integer]
-           }
+    -takes: Nothing
 
      -returns: {message: 'class added'}
 
